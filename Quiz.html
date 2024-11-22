@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+
+      h1 {
+        color: rgb(255, 255, 255);
+        font-size: 2em;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      form {
+        color: rgb(255, 255, 255);
+        font-size: 1.25em;
+        font-weight: bold;
+        border-color: rgb(255, 255, 255);
+        border-radius: 4px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 5px;
+        margin-top: 5px;
+        width: 500px;
+        height: 200px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), 5px 5px 10px rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quiz</h1>
+    <form>
+      <p>Question 1: What is the closest planet to the Sun</p>
+
+      <input type="radio" id="answer1" name="answer">
+      <label for="answer1">A: Venus</label><br>
+
+      <input type="radio" id="answer2" name="answer">
+      <label for="answer2">B: Mercury</label><br>
+
+      <input type="radio" id="answer3" name="answer">
+      <label for="answer3">C: Earth</label><br>
+
+      <input type="radio" id="answer4" name="answer">
+      <label for="answer1">D: Jupiter</label><br>
+
+      <h3 id="huh1"></h3>
+    </form>
+    <form>
+      <p>Question 2: |2x + 5 = 19| What is the value of x</p>
+
+      <input type="radio" id="answer5" name="answer">
+      <label for="answer5">A: 7</label><br>
+
+      <input type="radio" id="answer6" name="answer">
+      <label for="answer6">B: 4</label><br>
+
+      <input type="radio" id="answer7" name="answer">
+      <label for="answer7">C: 11</label><br>
+
+      <input type="radio" id="answer8" name="answer">
+      <label for="answer8">D: 9</label><br>
+
+      <h2 id="huh2"></h2>
+    </form>
+    <form>
+      <p>Question 3: Which one of these countrys are not rivals</p>
+
+      <input type="radio" id="answer9" name="answer">
+      <label for="answer9">A: France and the United Kingdom</label><br>
+
+      <input type="radio" id="answer10" name="answer">
+      <label for="answer10">B: Pakisthan and Russia</label><br>
+
+      <input type="radio" id="answer11" name="answer">
+      <label for="answer11">C: Turkey and Greece</label><br>
+
+      <input type="radio" id="answer12" name="answer">
+      <label for="answer12">D: Russia and the USA</label><br>
+
+      <h2 id="huh3"></h2>
+    </form>
+    <script>
+      const stfu1 = document.getElementById("answer1")
+      const stfu2 = document.getElementById("answer2")
+      const stfu3 = document.getElementById("answer3")
+      const stfu4 = document.getElementById("answer4")
+      const stfu5 = document.getElementById("answer5")
+      const stfu6 = document.getElementById("answer6")
+      const stfu7 = document.getElementById("answer7")
+      const stfu8 = document.getElementById("answer8")
+      const stfu9 = document.getElementById("answer9")
+      const stfu10 = document.getElementById("answer10")
+      const stfu11 = document.getElementById("answer11")
+      const stfu12 = document.getElementById("answer12")
+
+
+
+
+      function question1() {
+        if(stfu2.setAttribute('checked') = true) {
+          document.getElementById("huh1").innerHTML = "Correct!"
+        }
+
+        if(stfu1.setAttribute('checked') = true||stfu3.setAttribute('checked') = true||stfu4.setAttribute('checked') = true) {
+
+          document.getElementById("huh1").innerHTML = "Wrong!"
+        }
+      }
+
+      question1();
+
+      function question2() {
+        
+      }
+
+      function question3() {
+        
+      }
+    </script>
+  </body>
+</html>

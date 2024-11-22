@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      h1 {
+        color: white;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Temperature Conversion</h1>
+    <script>
+      function temperatureConvert() {
+        let selectTemp = prompt(`Please select a temperature and select the temperature you would like to convert to`);
+
+        if (selectTemp === `C and F` || selectTemp === `c and f` || selectTemp === `Celsius and Fahrenheit` || selectTemp === `celsius and fahrenheit`) {
+
+            let selectNum = prompt(`Please enter your Celsius number for us to convert`);
+
+            alert((selectNum * 9/5) + 32);
+        } 
+        else if (selectTemp === `F and C` || selectTemp === `f and c` || selectTemp === `Fahrenheit and Celsius` || selectTemp === `fahrenheit and celsius`) {
+
+            let selectNum = prompt(`Please enter your Fahrenheit number for us to convert`);
+
+            alert((selectNum - 32) * 5/9);
+        } 
+        else {
+            alert("Invalid selection. Please try again.");
+        }
+      }
+
+      setTimeout(temperatureConvert, 2000);
+    </script>
+  </body>
+</html>

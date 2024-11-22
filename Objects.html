@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      // Objects = a collection of related properties and/or methods
+      //           Can represent real world objects (People, Products, Places)
+      //           Objects = {key:value,
+      //                      Function()}
+
+
+
+      const person1 = {
+        firstName: "Spongebob",
+        lastName: "Squarepants",
+        age: 30,
+        isEmployed: true,
+        sayHello: () => console.log("Hi! im Spongebob"),
+        eat: () => console.log("I am eating a Krabby Patty"),
+      }
+
+
+      const person2 = {
+        firstName: "Patrick",
+        lastName: "Star",
+        age: 42,
+        isEmployed: false,
+        sayHello: () => console.log("Hey, im Patrick..."),
+        eat: () => console.log("I am eating roast beef, chicken, and pizza"),
+      }
+      
+
+      /* 
+        person1.sayHello();
+        person2.sayHello();
+
+        person1.eat();
+        person2.eat(); 
+      */
+
+      /* 
+        console.log(person1);
+        console.log(person1.firstName);
+        console.log(person1.lastName);
+        console.log(person1.age);
+        console.log(person1.isEmployed);
+        console.log(person1.sayHello);
+
+
+        console.log(person2);
+        console.log(person2.firstName);
+        console.log(person2.lastName);
+        console.log(person2.age);
+        console.log(person2.isEmployed);
+        console.log(person2.sayHello);
+      */
+
+
+      /* 
+      let alien = {
+        name: "Hamza",
+        tech: "JS",
+      }
+
+      console.log(alien.name);
+      console.log(alien.tech);
+
+      console.log(alien['name']);
+      console.log(alien['tech']);
+      */
+
+      /* 
+        let alien = {
+          name: "Hamza",
+          tech: "JS",
+          computer: {
+            cpu: "Ryzen 5 7600",
+            ram: "32gb",
+            motherboard: "Msi",
+            case: "Montech",
+          }
+        }
+
+
+        delete alien.computer.ram
+
+        console.log(alien);
+        console.log(alien.name);
+        console.log(alien.tech);
+
+        console.log(alien.computer);
+        console.log(alien.computer.cpu);
+        console.log(alien.computer.ram);
+        console.log(alien.computer.motherboard);
+        console.log(alien.computer.case.length);
+      */
+
+      
+
+
+      const myObj = {
+        name: "Hamza",
+      }
+
+      const anotherObj = {
+        alive: true,
+        age: 11,
+        hobbies: ["Coding", "Gaming", "Basketball"],
+        beverages: {
+          morning: "Water",
+          afternoon: ["Water", "Coke-Cola"],
+          evening: ["Water", "Juice"],
+        },
+        action: function() {
+          return `Time for ${this.beverages.afternoon[0]}`
+        }
+
+      }
+
+
+      // console.log(myObj);
+      // console.log(myObj.name);
+
+      /* 
+        // console.log(anotherObj);
+        console.log(anotherObj.alive);
+        console.log(anotherObj.age);
+        // console.log(anotherObj.hobbies);
+        console.log(anotherObj.hobbies[0]);
+        console.log(anotherObj.hobbies[1]);
+        console.log(anotherObj.hobbies[2]);
+        // console.log(anotherObj.beverages);
+        console.log(anotherObj.beverages.morning);
+        // console.log(anotherObj.beverages.afternoon);
+        // console.log(anotherObj.beverages.evening);
+        console.log(anotherObj.beverages.afternoon[0]);
+        console.log(anotherObj.beverages.afternoon[1]);
+        console.log(anotherObj.beverages.evening[0]);
+        console.log(anotherObj.beverages.evening[1]);
+      */
+
+      // console.log(anotherObj.action());
+
+
+
+
+      const vehicle = {
+        wheels: 4,
+        engine: function() {
+          return "Vrroooom!";
+        }
+      }
+      /* 
+        const truck = Object.create(vehicle);
+        truck.doors = 2;
+      */
+      /* 
+      console.log(truck);
+      console.log(truck.doors);
+      console.log(truck.wheels);
+      console.log(truck.engine());
+      */
+      
+      const car = Object.create(vehicle);
+      car.doors = 4
+      car.engine = function() {
+        return "Whoooosh!";
+      }
+    
+      /* 
+      console.log(car);
+      console.log(car.doors);
+      console.log(car.wheels);
+      console.log(car.engine());
+      */
+
+      const tesla = Object.create(car);
+      tesla.engine = function() {
+        return "Shoooosh!"
+      }
+
+      // console.log(tesla.wheels);
+      // console.log(tesla.engine());
+
+
+
+
+      const band = {
+        vocals: "Robert Plant",
+        guitar: "Jimmy Page",
+        bass: "John Paul Jones",
+        drums: "John Bonham",
+      };
+
+
+      const {vocals, guitar, bass, drums} = band
+
+      console.log(vocals);
+      console.log(guitar);
+
+      /* 
+        delete band.drums
+        console.log(band.hasOwnProperty("drums"));
+
+        console.log(Object.keys(band));
+        console.log(Object.values(band));
+
+        for(let job in band) {
+          console.log(`on ${job}, it's ${band[job]}!`)
+        }
+      */
+    </script>
+  </body>
+</html>

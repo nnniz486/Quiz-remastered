@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+
+      h1 {
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        box-shadow: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="yo">Random number</h1>
+    <script>
+      function randomNum() {
+        const randomFloat = Math.random();
+        let getId = document.getElementById('yo');
+
+        getId.textContent = Math.round(randomFloat * 100);
+        // console.log(Math.round(randomFloat * 100));
+      }
+
+      randomNum();
+    </script>
+  </body>
+</html>

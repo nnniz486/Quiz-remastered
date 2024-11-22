@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      function greet1(user) {
+         return `Hello ${user}`
+      }
+
+      let user = "Hamza";
+      let srt = greet1(user)
+      // console.log(srt);
+
+
+      let add1 = function(name1, name2) {
+        return name1 + name2
+      }
+
+      let sum1 = add1
+
+      let result = sum1(5, 6);
+      // console.log(result);
+
+
+      
+      function greet2() {
+        console.log("Hi Hamza");
+      }
+
+      // greet2()
+
+
+
+      function happyBirthday(username, age) {
+        console.log(`Happy birthday to you!`);
+        console.log(`Happy birthday to you!`);
+        console.log(`Happy birthday dear ${username}!`);
+        console.log(`Happy birthday to you!`);
+        console.log(`You are ${age} years old!`);
+      }
+      /* 
+        happyBirthday("Hamza", 12);
+        happyBirthday("Light", 23);
+        happyBirthday("L", 25);
+      */
+
+
+
+      function add2(x, y) {
+        // let result = x + y
+        return x + y
+      }
+      
+
+      /* 
+        let answer = add2(5, 6);
+        console.log(answer);
+      */
+
+
+
+      function subtract(x, y) {
+        return x - y
+      }
+
+      function multiply(x, y) {
+        return x * y
+      }
+
+      function divide(x, y) {
+        return x / y
+      }
+
+      // console.log(divide(5, 6));
+
+
+      function isEven(number) {
+        if (number % 2 === 0) {
+          return true;
+        }
+        else {
+          return false
+        }
+      }
+
+      // console.log(isEven(5))
+
+
+
+
+      function isValidEmail(email) {
+        if (email.includes("@")) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+
+      // console.log(isValidEmail(`mhniz2002@gmail.com`));
+
+
+
+      let x = 3;
+
+      function function1() {
+        let x = 2;
+        console.log(x);
+      }
+
+      function function2() {
+        let x = 1;
+        console.log(x);
+      }
+
+
+      // function1();
+      // function2();
+
+
+
+
+      const arrow = () => console.log("Hello!");
+
+      arrow();
+    </script>
+  </body>
+</html>

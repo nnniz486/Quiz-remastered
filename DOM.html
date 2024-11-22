@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1>The DOM</h1>
+
+    <ul id="fruits">
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Banana</li>
+    </ul>
+
+    <ul id="vegetables">
+      <li>Carrot</li>
+      <li>Onions</li>
+      <li>Potatoas</li>
+    </ul>
+
+    <ul id="desserts">
+      <li>Cake</li>
+      <li>Cookie</li>
+      <li>Ice cream</li>
+    </ul>
+    <script>
+      // DOM Navigation
+
+
+      const ele1 = document.getElementById("fruits");
+      const firstChild = ele1.firstElementChild
+
+      firstChild.style.backgroundColor = "yellow"
+    </script>
+  </body>
+</html>

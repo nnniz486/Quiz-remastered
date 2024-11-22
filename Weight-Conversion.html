@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Conversion</title>
+    <style>
+      body {
+        background-color: black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+
+      h1 {
+        color: white;
+        padding: 10px;
+        font-size: 2.25em;
+      }
+
+      form {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        width: 400px;
+        height: 550px;
+        border-radius: 30px;
+        box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+      }
+
+      #textBox {
+        width: 50%;
+        text-align: center;
+        font-size: 2em;
+        border: 2px solid hsl(0, 100%, 50%);
+        border-radius: 4px;
+        margin-bottom: 15px;
+        width: 275px;
+      }
+
+      label {
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      button {
+        color: rgb(0, 0, 0);
+        font-size: 1.25em;
+        font-weight: bold;
+        border: 2px solid red;
+        border-radius: 4px;
+      }
+
+      p {
+        font-size: 1.75em;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="formBox">
+      <h1 id="h1">Weight Conversion</h1><br>
+      <input type="number" id="textBox" value="0"><br>
+
+      <input type="radio" id="pound" name="group1">
+      <label for="pound">⬅️ Pounds</label><br>
+
+      <input type="radio" id="kilogram" name="group1">
+      <label for="kilogram">⬅️ Kilograms</label><br>
+
+      <input type="radio" id="gram" name="group1">
+      <label for="gram">⬅️ Grams</label><br>
+
+      <input type="radio" id="ton" name="group1">
+      <label for="ton">⬅️ Tons</label><br>
+
+      <button type="button" onclick="convert()">Submit</button><br>
+      <p id="result"></p>
+      <p id="results"></p>
+      <p id="resultss"></p>
+      <p id="resultsss"></p>
+    </form>
+    <script>
+      const kilograms = document.getElementById("kilogram");
+      const pounds = document.getElementById("pound");
+      const grams = document.getElementById("gram");
+      const tons = document.getElementById("ton");
+      const textBoxx = document.getElementById("textBox");
+      const p = document.getElementById("result");
+      const ps = document.getElementById("results");
+      const pss = document.getElementById("resultss");
+      const psss = document.getElementById("resultsss");
+      let weight;
+
+      function convert() {
+        if(kilograms.checked){
+          weight = Number(textBoxx.value)
+          weight = weight * 2.20462
+          p.textContent = weight + " Pounds";
+
+          weight = Number(textBoxx.value)
+          weight = weight * 1000
+          ps.textContent = weight + " Grams";
+
+          weight = Number(textBoxx.value)
+          weight = weight / 1000
+          pss.textContent = weight + " Tons";
+        }
+
+        //______________________________________________________________
+
+        else if(pounds.checked){
+          weight = Number(textBoxx.value)
+          weight = weight / 2.20462
+          p.textContent = weight + " Kilograms";
+
+          weight = Number(textBoxx.value)
+          weight = weight * 454
+          ps.textContent = weight + " Grams";
+
+          weight = Number(textBoxx.value)
+          weight = weight / 2000
+          pss.textContent = weight + " Tons";
+        }
+
+        //______________________________________________________________
+
+        else if(grams.checked){
+          weight = Number(textBoxx.value)
+          weight = weight / 1000
+          p.textContent = weight + " Kilograms";
+
+          weight = Number(textBoxx.value)
+          weight = weight / 454
+          ps.textContent = weight + " Pounds";
+
+          weight = Number(textBoxx.value)
+          weight = weight / 1000000
+          pss.textContent = weight + " Tons";
+        }
+
+        //______________________________________________________________
+
+        else if(tons.checked){
+          weight = Number(textBoxx.value)
+          weight = weight * 1000
+          p.textContent = weight + " Kilograms";
+
+          weight = Number(textBoxx.value)
+          weight = weight * 2000
+          ps.textContent = weight + " Pounds";
+
+          weight = Number(textBoxx.value)
+          weight = weight * 1000000
+          pss.textContent = weight + " Grams";
+        }
+
+        else {
+          p.textContent = "Please select a unit"
+          p.style.color = "orange"
+        }
+      }
+    </script>
+  </body>
+</html>
