@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quiz</title>
+    <style>
+        #quizForm {
+            font-size: 1.4rem;
+            font-weight: bold;
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1),6px 6px 12px rgba(255, 255, 255, 0.329);
+            width: 500px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            flex-direction: row;
+            justify-content: center;
+            flex: auto;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 1.35rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            justify-content: center;
+            flex: auto;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+    </style>
+  </head>
+    <body>
+    <button onclick="
+    function setDark() {
+        document.body.style.backgroundColor = `black`
+       const pizza = document.getElementById(`h1`)
+
+        const quiz = document.getElementById(`quizForm`)
+
+        quiz.style.color = `white`
+        pizza.style.color = `white`
+    }
+
+    setDark()
+    ">Dark mode</button>
+
+    <button onclick="
+        function setLight() {
+        document.body.style.backgroundColor = `white`
+       const pizza = document.getElementById(`h1`)
+
+        const quiz = document.getElementById(`quizForm`)
+
+        quiz.style.color = `black`
+        pizza.style.color = `black`
+    }
+
+    setLight()
+    ">Light mode</button>
+
+    <h1 id="h1">Quiz</h1>
+    <form id="quizForm">
+    <p>Question 1: What is the closest planet to the Sun?</p>
+
+    <input type="radio" id="answer1" name="question1" value="A">
+    <label for="answer1">A: Venus</label><br>
+
+    <input type="radio" id="answer2" name="question1" value="B">
+    <label for="answer2">B: Mercury</label><br>
+
+    <input type="radio" id="answer3" name="question1" value="C">
+    <label for="answer3">C: Earth</label><br>
+
+    <input type="radio" id="answer4" name="question1" value="D">
+    <label for="answer4">D: Jupiter</label><br>
+
+    <h3 id="result1"></h3>
+
+    <p>Question 2: |2x + 5 = 19| What is the value of x?</p>
+    <input type="radio" id="answer5" name="question2" value="A">
+    <label for="answer5">A: 7</label><br>
+
+    <input type="radio" id="answer6" name="question2" value="B">
+    <label for="answer6">B: 4</label><br>
+
+    <input type="radio" id="answer7" name="question2" value="C">
+    <label for="answer7">C: 11</label><br>
+
+    <input type="radio" id="answer8" name="question2" value="D">
+    <label for="answer8">D: 9</label><br>
+
+    <h3 id="result2"></h3>
+
+    <p>Question 3: Which one of these countries are not rivals?</p>
+    <input type="radio" id="answer9" name="question3" value="A">
+    <label for="answer9">A: France and the United Kingdom</label><br>
+
+    <input type="radio" id="answer10" name="question3" value="B">
+    <label for="answer10">B: Pakistan and Russia</label><br>
+
+    <input type="radio" id="answer11" name="question3" value="C">
+    <label for="answer11">C: Turkey and Greece</label><br>
+
+    <input type="radio" id="answer12" name="question3" value="D">
+    <label for="answer12">D: Russia and the USA</label><br>
+
+    <h3 id="result3"></h3>
+
+    <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+
+    <script>
+    function checkAnswers() {
+    // Correct answers
+    const correctAnswers = {
+    question1: 'B',
+    question2: 'A',
+    question3: 'B'
+    };
+
+    // Check each question
+    for (let question in correctAnswers) {
+    const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+    const resultElement = document.getElementById(`result${question.slice(-1)}`);
+
+    if (selectedAnswer) {
+    if (selectedAnswer.value === correctAnswers[question]) {
+    resultElement.textContent = 'Correct!';
+    resultElement.style.color = 'green';
+    } else {
+    resultElement.textContent = 'Incorrect!';
+    resultElement.style.color = 'red';
+    }
+    } else {
+    resultElement.textContent = 'Please select an answer.';
+    resultElement.style.color = 'orange';
+    }
+    }
+    }
+    </script>
+    </body>
+</html>
